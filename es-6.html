@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>es-6</title>
+            <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <script src="main.js"></script>
+    </head>
+<body>
+    
+    <script>
+        //promise
+
+        /*const count = 10;
+        let countValue = new Promise(function (resolve, reject) {
+        if (count>20) {
+             resolve("There is a count value.");
+        } else {
+            reject("There is no count value");
+        }
+        });
+        console.log(countValue);*/
+
+
+        /*var obj={
+            a:'b',
+            b:'c',
+        }
+        var obj1=obj;
+        obj1.a='e';
+        console.log(obj, obj1)*/
+
+
+        /*var obj={
+            a:'b',
+            b:'c',
+            "a-b":'e'
+        }
+        console.log(obj["a-b"])*/
+
+
+        /*console.log(1);
+        setTimeout(function(){
+            console.log(2)
+        },300);
+        console.log(3);*/
+
+       
+       /* console.log(a);
+        var a=10;*/
+
+
+        //map
+        /*var arr=[0,1,2,3];
+        var res=arr.map(function(item, index){
+            return item * 2;
+        });
+            console.log(res);*/
+
+        //FILTER
+        /*var arr=[0,1,2,3,4,5,6,7];
+        var res=arr.filter(function(item, index){
+            return item > 2;
+        });
+            console.log(res);*/
+            
+        //EVERY
+        /*var arr=[1,2,3,4,5,6,7];
+        var res=arr.every(function(item, index){
+            return item > 0;
+        });
+            console.log(res);*/
+
+        //SOME
+        /*var arr=[1,2,3,4,5,6,7];
+        var res=arr.some(function(item, index){
+            return item > 5;
+        });
+            console.log(res);*/
+
+
+        //FIND
+        /*var arr=[1,2,3,4,5,6,7];
+        var res=arr.find(function(item, index){
+            return item > 5;
+        });
+            console.log(res);*/
+
+
+
+        
+        /*function main(){
+            setTimeout(function(){
+                console.log("1")
+            },2000);
+        }
+        function main1(){
+            setTimeout(function(){
+                console.log("2")
+            },1000);
+        }
+        main();
+        main1();*/
+
+
+        //promise all
+        /*function main(){
+            setTimeout(function(){
+                console.log("1")
+                main1();
+            },2000);
+        }
+        function main1(){
+            setTimeout(function(){
+                console.log("2")
+            },1000);
+        }
+       
+        main();*/
+
+       /* function main(){
+            return new Promise(function(resolve, reject){
+                setTimeout(function(){
+                    resolve("rest");
+                },3000);
+            });
+        }
+        console.log(main());*/
+
+
+        //promise.all
+        /*function main(){
+            return new Promise(function(resolve, reject){
+                setTimeout(function(){
+                    resolve("rest");
+                },3000);
+            });
+        }
+
+        function main1(){
+            return new Promise(function(resolve, reject){
+                setTimeout(function(){
+                    resolve("test");
+                },3000);
+            });
+        }
+        
+
+        Promise.all([main(),main1()])
+        .then(function(success){
+            console.log("success", success)
+        })
+        .catch(function(err){
+            console.log("err" , err)
+        });*/
+
+        /*function main(){
+            return new Promise(function(resolve, reject){
+                setTimeout(function(){
+                    resolve("res1");
+                },3000);
+            });
+        }
+
+        function main1(res){
+            console.log("res",res);
+            return new Promise(function(resolve, reject){
+                setTimeout(function(){
+                    reject("res2");
+                },1000);
+            });
+        }
+
+        //ASYNC
+        async function Parent(){
+            try{
+            var res1= await main();
+            var res2= await main1();
+            console.log("res", res1, res2);
+            }
+            catch(err){
+                console.log(err);
+            }
+        }
+        Parent();*/
+
+        //stack
+       /* function a(){
+            console.log("a one");
+        }   
+        function b(){
+            console.log("b one");
+            a();
+        }
+        b()*/
+
+        //task-queue
+       /* function a(){
+            console.log("logging");
+        
+        setTimeout(()=>{
+            console.log('logged');
+        },5000);
+
+        console.log("end fun")
+
+    }
+        a();*/
+
+
+        //call()
+        /*var obj1={
+            num:2,
+        }
+        var obj2={
+            f1:function (a){
+                console.log(this.num+2);
+            }
+        };
+        obj2.f1.call(obj1,2);*/
+
+
+        //call()
+        /*var obj={
+            name:"mugi",
+        };
+         function main(a,b,c){
+            console.log(this,a,b,c);
+         }
+
+         main.call(obj,1,2,3)*/
+
+
+        //apply()
+        /*var obj={
+            name:"mugi",
+        };
+         function main(a,b,c){
+            console.log(this,a,b,c);
+         }
+
+         main.apply(obj,[1,2,3])*/
+        
+
+        //bind()
+        /*var obj={
+            name:"mugi",
+        };
+         function main(a,b,c){
+            console.log(this,a,b,c);
+         }
+
+         var fun=main.bind(obj,1,2,3);
+
+         fun();*/
+
+         /*function main(){
+            var a=1;
+            if(a===1){
+                let b=2;
+                console.log(a+b);
+            }
+            console.log(a+b);
+         }
+         main()*/
+
+
+        //Template literal
+       /* var a='mugi';
+        console.log("rajan"+a);
+
+        console.log(`rajan ${a}`)*/
+
+
+        //arrow function
+        /*var obj={
+            name:"mugi",
+            normal:function (){
+                console.log(this.name);
+            },
+            arrow:() =>{
+                console.log(this.name);
+            },
+
+        };
+
+        obj.normal();
+        obj.arrow();*/
+
+
+
+        /*let obj={
+            name:"mugi",
+        };
+
+        let obj2={
+            normal(){
+                console.log(this);
+                    let callback=()=>{
+                        console.log(this);
+                    };
+                    callback();
+            },
+        };
+        obj2.normal.call(obj);*/
+
+        
+
+        /*var obj={name:"mugi",age:23};
+        var arr=[1,4,3];
+
+        const {name, age}=obj;
+        const [a,b,c]=arr;
+        console.log(name,age,a,b,c);*/
+
+
+    
+       //spread operator
+       /*let a=[1,2,3,4,5];
+       let b=[6,7,8,9,10];
+       let c=[...a,"and",...b];
+       console.log(c)*/
+
+
+       //Class
+      /* class main{
+            getdata(){
+                console.log("data");
+            }
+       }
+       class child extends main{
+        getname(){
+            console.log(main)
+        }
+       }*/
+       
+
+       /*class User {
+
+constructor(name) {
+  this.name = name;
+}
+
+sayHi() {
+  alert(this.name);
+}
+
+}
+
+// Usage:
+let user = new User("John");
+user.sayHi();*/
+
+
+
+//modules
+//default
+
+
+    
+   
+
+   
+
+
+           
+        
+
+    </script>
+</body>
